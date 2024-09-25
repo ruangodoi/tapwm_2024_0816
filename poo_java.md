@@ -5,7 +5,7 @@
 - JVM: permite que o programa roda no sistema operacioanis, como windonws e IOS, e mobile.
 - JRE: execute o programa java
 - JDK: permite que desenvolvedor programa no java
-  ** Curiosidade
+  * Curiosidade
   - única blblioteca que não precisa ser importada é java.lang, pq a jvm já coloca pra nós.
 
 ## Classes e objetos
