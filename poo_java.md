@@ -42,7 +42,7 @@ public class acessorio {
 
 **Curiosidade**
 
-- Nas regras de nomenclatura, os nomes dos atributos, classes, métodos e objtos devem começar em letra maiúscula.
+- Nas regras de nomenclatura, os nomes dos atributos, classes e métodos devem começar em letra maiúscula.
 
 ## Exemplo
 
@@ -53,7 +53,7 @@ public class acessorio {
    String Cor, Forma;
    float Tamanho;
 
-   public void Colocar_pulswira() {
+   public void Colocar_pulseira() {
       System.out.println("Colocar no braço");
    }
 
@@ -66,10 +66,10 @@ public class acessorio {
 ```java
 public class teste {
    public static void main(String[] args) {
-      pulseira pulseira = new acessorio();
+      pulseira pulseira = new acessorio();  //Instanciou o objeto do tipo pulseira, com construtor acessorio
       oculos oculos = new acessorio();
 
-      pulseira.Cor = "Verde";
+      pulseira.Cor = "Verde"; // Atribiu valor para atributo Cor, do objeto pulseira
       pulseira.Forma = "Redonda";
       pulseira.Tamanho = 10.0f;
 
@@ -79,9 +79,11 @@ public class teste {
 
       System.out.println("A cor da pulseira " + pulseira.Cor + "\nA forma da pulseira é: " + pulseira.Forma + "O tamanho da pulseira é: " + pulseira.Tamano);
 
-      pulseira.Colorcar_pulseira();
+      pulseira.Colocar_pulseira();
 
       System.out.println("A cor do óculos " + Oculos.Cor + "\nA forma do óculos é: " + Oculos.Forma + "O tamanho do óculos é: " + Oculos.Tamano);
+
+      oculos.Colocar_oculos();
    }
 }
 ```
