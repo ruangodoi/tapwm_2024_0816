@@ -39,3 +39,49 @@ public class acessorio {
    }
 }
 ```
+
+**Curiosidade**
+
+- Nas regras de nomenclatura, os nomes dos atributos, classes, métodos e objtos devem começar em letra maiúscula.
+
+## Exemplo
+
+**Este é o código completo**
+
+```java
+public class acessorio {
+   String Cor, Forma;
+   float Tamanho;
+
+   public void Colocar_pulswira() {
+      System.out.println("Colocar no braço");
+   }
+
+   public void Colocar_oculos() {
+      System.out.println("Colocar no olho");
+   }
+}
+```
+
+```java
+public class teste {
+   public static void main(String[] args) {
+      pulseira pulseira = new acessorio();
+      oculos oculos = new acessorio();
+
+      pulseira.Cor = "Verde";
+      pulseira.Forma = "Redonda";
+      pulseira.Tamanho = 10.0f;
+
+      oculos.Cor = "Preto";
+      oculos.Forma = "Redonda";
+      oculos.Tamanho = 1.50f;
+
+      System.out.println("A cor da pulseira " + pulseira.Cor + "\nA forma da pulseira é: " + pulseira.Forma + "O tamanho da pulseira é: " + pulseira.Tamano);
+
+      pulseira.Colorcar_pulseira();
+
+      System.out.println("A cor do óculos " + Oculos.Cor + "\nA forma do óculos é: " + Oculos.Forma + "O tamanho do óculos é: " + Oculos.Tamano);
+   }
+}
+```
