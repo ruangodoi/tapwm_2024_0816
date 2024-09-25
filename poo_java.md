@@ -15,7 +15,7 @@
 - Objetos: o objeto é criado a partir de uma classe, é caracterizada por atributo e método.
 
 ```java
-public class acessorio {
+public class teste {
     oculos oculo = new oculos();
     pulseiras pulseira = new pulseira();
 }
@@ -23,4 +23,12 @@ public class acessorio {
 
 ## Atrbutos e métodos
 
-- Atributos 
+- Atributos: denini as características do objeto, por exemplo, cor, tamanho, forma. No java variável e atributos são as mesma coisas.
+- Métodos: denifi o comprtamento do objeto. No java, função e método são as mesmas coisas
+
+```java
+public class acessorio {
+   String Cor;
+   float Tamanho;
+   String Forma;
+}
