@@ -79,7 +79,7 @@ public class teste {
 
       System.out.println("A cor da pulseira " + pulseira.Cor + "\nA forma da pulseira é: " + pulseira.Forma + "O tamanho da pulseira é: " + pulseira.Tamano);
 
-      pulseira.Colocar_pulseira();
+      pulseira.Colocar_pulseira(); // Chamando o método, através do objeto pulseira
 
       System.out.println("A cor do óculos " + Oculos.Cor + "\nA forma do óculos é: " + Oculos.Forma + "O tamanho do óculos é: " + Oculos.Tamano);
 
