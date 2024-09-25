@@ -28,7 +28,14 @@ public class teste {
 
 ```java
 public class acessorio {
-   String Cor;
-   float Tamanho;
-   String Forma;
+   String Cor, Forma; // Definindo o atributo do tipo String
+   float Tamanho; // Definindo o atributo do tipo float
+
+   public void colocar() { //Definido o método do tipo void
+      System.out.println("Colocar no braço");
+   }
+   public void colocar() { //Definindo o método do tipo void
+      System.out.println("Colocar no olho");
+   }
 }
+```
