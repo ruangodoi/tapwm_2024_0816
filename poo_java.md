@@ -8,10 +8,10 @@
 
 ## Classes e objetos
 
--Classes: agrupa os objetos, por exemplo, classe acessório, temos o objeto, óculos, pulseiras, etc...
--Objetos: o objeto é criado a partir de uma classe, é caracterizada por atributo e método.
+- Classes: agrupa os objetos, por exemplo, classe acessório, temos o objeto, óculos, pulseiras, etc...
+- Objetos: o objeto é criado a partir de uma classe, é caracterizada por atributo e método.
 
-```java
+``` java
 public class acessorio {
     oculos oculo = new oculos();
     pulseiras pulseira = new pulseira();
