@@ -87,3 +87,41 @@ public class teste {
    }
 }
 ```
+
+## Construtor
+
+- É um método especial, onde passa por parâmetro os atributos da classe. Com isso, pode dar valor aos atributos na hora de instaciar os objetos.
+
+- O nome do construtor tem que ser o mesmo nome da classe.
+
+## Exemplo
+
+```java
+public class acessorio {
+   String Cor, Forma;
+   float Tamanho;
+
+   public acessorio(String Cor, String Forma, floar Tamanho) {
+      this.Cor = Cor;
+      this.Forma = Forma;
+      this.Tamanho = Tamanho;
+   }
+   public void Colocar_pulseira() {
+      System.out.println("Colocar no braço");
+   }
+
+   public void Colocar_oculos() {
+      System.out.println("Colocar no olho");
+   }
+}
+
+```
+
+```java
+
+public class teste {
+   public static void main(String[] args) {
+      pulseira pulseira = new acessorio("Verde", "Redonda", 10.0f);
+   }
+}
+```
