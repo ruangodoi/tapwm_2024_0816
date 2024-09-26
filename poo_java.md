@@ -66,8 +66,8 @@ public class acessorio {
 ```java
 public class teste {
    public static void main(String[] args) {
-      pulseira pulseira = new acessorio();  //Instanciou o objeto do tipo pulseira, com construtor acessorio
-      oculos oculos = new acessorio();
+      acessorio pulseira = new acessorio();  //Instanciou o objeto do tipo acessorio, com construtor acessorio
+      acessorio oculos = new acessorio();
 
       pulseira.Cor = "Verde"; // Atribiu valor para atributo Cor, do objeto pulseira
       pulseira.Forma = "Redonda";
@@ -118,6 +118,7 @@ public class acessorio {
 ```
 
 ```java
+
 
 public class teste {
    public static void main(String[] args) {
