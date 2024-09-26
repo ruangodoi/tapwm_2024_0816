@@ -122,7 +122,7 @@ public class acessorio {
 
 public class teste {
    public static void main(String[] args) {
-      pulseira pulseira = new acessorio("Verde", "Redonda", 10.0f);
+      acessorio pulseira = new acessorio("Verde", "Redonda", 10.0f);
    }
 }
 ```
