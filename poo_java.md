@@ -31,7 +31,7 @@ public class acessorio {
    String Cor, Forma; // Definindo o atributo do tipo String
    float Tamanho; // Definindo o atributo do tipo float
 
-   public void colocar() { //Definido o método do tipo void
+   public void colocar() { //Definido o método do tipo void, ou seja, sem retorno
       System.out.println("Colocar no braço");
    }
    public void colocar() { //Definindo o método do tipo void
