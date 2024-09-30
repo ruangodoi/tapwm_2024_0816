@@ -241,3 +241,7 @@ public class Teste {
    }
 }
 ```
+
+## Polimorfismo
+
+Polimorfismo no java, em tradução é "várias formas", o código pode pode ter várias formas de executa o programa, deixando o código mais enxuto, flexível, padronização, evitar duplicidade de código, por exemplo, para evitar code small, pode isolar numa classe, usar o coceito de herança, jogar atributos e métodos na superclasse.  
