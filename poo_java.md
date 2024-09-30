@@ -153,6 +153,7 @@ public class acessorio() {
 
 }
 ``` 
+
 ## Herança
 
 Na programação orientada objeto java, no conceito de herança, existe superclasse e subclasse, cujo a subclasse her atributo e método na superclasse. Esse conceito é importante, pois elimina duplicidade de código,ou seja, subclasse reutiliza código, isso deixa o código flexivel, enxuto e fácil manutenção.
@@ -183,3 +184,60 @@ public class pulseira extends acessorio {
 }
 ```
 Nesse código, na hora de atribuir valor, qunado instaciar o objeto do tipo pulseira e construtor pulseira, e chamar os métodos do objeto do tipo pulseira, vai funcionar, porque a subclasse herda atributos e métodos da superclasse, ele reutiliza o código, não precisa digitar novamente.
+
+## Encapsulamento
+
+Encapsular os atributos é essencial para desenvolvimento para o sistema, pois a maior vantagem **proteger** e **padronizar** os atributos nem numa outra classe.
+
+**Qualificador**: é o nível de encalpsulamento
+
+**Tipos de encapsulamento**
+
+- public: variável visível por outras classe
+- Private: variável visível apenas em uma classe
+- protected: variável visível por superclasse e subclasse
+- package: varíavel apenas que estão dentrode uma determinada pasta
+
+**Curiosidade**
+- Ao definir private nos atributos, as subclasse pode acessar e fazer manutenções usando os métodos get e set.
+
+```java
+public class acessorio {
+   private String Cor, Forma;
+   private float Tamanho;
+
+   public String getCor() {
+      return Cor;
+   }
+   public void setCor(String Cor) {
+      this.Cor = Cor;
+   }
+
+   public String getForma() {
+      return Forma;
+   }
+   public void setForma(String Forma) {
+      this.Forma = Forma;
+   }
+
+   public float getTamanho() {
+      return Tamanho;
+   }
+   public void setTamanho(float Tamanho) {
+      this.Tamanho = Tamanho
+   }
+}
+``` 
+```java
+public class Teste {
+   public static void main(String[] args) {
+      acessorio pulseira = new acessorio();
+
+      pulseira.setCor("verde"); // set atribui valor, pois no método set, o atributo passar por parâmetro
+      pulseira.setForma("redonda");
+      pulseira.setTamanho(10.0f);
+
+      System.out.println("Cor da pulseira: " + pulseira.getCor() + "Forma da pulseira: " + pulseira.getForma() + "Tamanho da pulseira: " + pulseira.getTamanho()); // get retorna o valor do atrbuto
+   }
+}
+```
