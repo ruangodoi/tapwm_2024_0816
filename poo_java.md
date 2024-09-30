@@ -101,7 +101,7 @@ public class acessorio {
    String Cor, Forma;
    float Tamanho;
 
-    public qessorio(String Cor, String Forma, floar Tamanho) {
+    public aessorio(String Cor, String Forma, floar Tamanho) {
       tis.Forma = Forma;
       this.Tamanho = Tamanho;
    }
