@@ -120,7 +120,6 @@ public class acessorio {
 
 ```java
 
-
 public class teste {
    public static void main(String[] args) {
       acessorio pulseira = new acessorio("Verde", "Redonda", 10.0f);
@@ -241,6 +240,14 @@ public class Teste {
    }
 }
 ```
+
+## Referência
+
+Quando chama algum método, atribui valor ou pega o atributo, ele são referenciado, pelo **.**, tudo que é do lado esquerdo é referênica, que é o objeto, e tudo que está do lado esquerdo é o método ou atributo que pertence ao objeto.
+
+**Curiosidade**
+
+- O comando **System.out.println** é prova disso: println é o método, printa tudo que está entre conchentes, out é o objto e System é a classe. Quando inicia com letra maiúscula é a classe, como System, String( que é a classe que um conjunto de caracteres).
 
 ## Polimorfismo
 
