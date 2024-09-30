@@ -107,8 +107,8 @@ public class acessorio {
       this.Tamanho = Tamanho;
    }
    public void Colocar_pulseira() {
-      Syshis.Cor = Cor;
-      thtem.out.println("Colocar no braço");
+      this.Cor = Cor;
+      System.out.println("Colocar no braço");
    }
 
    public void Colocar_oculos() {
@@ -189,14 +189,14 @@ Nesse código, na hora de atribuir valor, qunado instaciar o objeto do tipo puls
 
 Encapsular os atributos é essencial para desenvolvimento para o sistema, pois a maior vantagem **proteger** e **padronizar** os atributos nem numa outra classe.
 
-**Qualificador**: é o nível de encalpsulamento
+**Qualificador**: é o nível de encapsulamento
 
 **Tipos de encapsulamento**
 
-- public: variável visível por outras classe
-- Private: variável visível apenas em uma classe
-- protected: variável visível por superclasse e subclasse
-- package: varíavel apenas que estão dentrode uma determinada pasta
+- public: variável visível por outras classe.
+- Private: variável visível apenas em uma classe.
+- protected: variável visível por superclasse e subclasse.
+- package: varíavel apenas que estão dentro de uma determinada pasta.
 
 **Curiosidade**
 - Ao definir private nos atributos, as subclasse pode acessar e fazer manutenções usando os métodos get e set.
@@ -237,11 +237,116 @@ public class Teste {
       pulseira.setForma("redonda");
       pulseira.setTamanho(10.0f);
 
-      System.out.println("Cor da pulseira: " + pulseira.getCor() + "Forma da pulseira: " + pulseira.getForma() + "Tamanho da pulseira: " + pulseira.getTamanho()); // get retorna o valor do atrbuto
+      System.out.println("Cor da pulseira: " + pulseira.getCor() + "Forma da pulseira: " + pulseira.getForma() + "Tamanho da pulseira: " + pulseira.getTamanho()); // get retorna o valor do atributo
    }
 }
 ```
 
 ## Polimorfismo
 
-Polimorfismo no java, em tradução é "várias formas", o código pode pode ter várias formas de executa o programa, deixando o código mais enxuto, flexível, padronização, evitar duplicidade de código, por exemplo, para evitar code small, pode isolar numa classe, usar o coceito de herança, jogar atributos e métodos na superclasse.  
+Polimorfismo no java, em tradução é "várias formas", o código pode pode ter várias formas de executar o programa, deixando o código mais enxuto, flexível, padronização, evitar duplicidade de código, por exemplo, para evitar code small (duplicidade de código), pode isolar numa classe, usar o coceito de herança, jogar atributos e métodos na superclasse.  
+
+## Abstract
+
+Para ter a classe e método abstrato, basta colocar a palavra "abstract", isso deixa o código masi flexivel na hora de fazer manutenção, evitar duplicidade de código
+
+**Classes abstratos**
+
+ - Classe concreta: permite a instância de objeto.
+ - Classe abstrata: não permite a instância de objeto.
+
+ **Método abstrato**
+
+ - Método abstrato: não têm lógica do método, é a assinatura dele, sendo que na subclasse pode reutilizar esse método, seguindo o mesmo nome e tipo de retorno.
+
+ ```java
+ public abstract class acessorio {
+   
+   public abstract void Colocar_puseira();
+ }
+ ``` 
+
+**curiosidade**
+
+-Para ter métodos abstrato, a classe tem que ser abstrato
+
+##Exercício
+
+**Faz o código acessorio usando todos esses conceitos**
+
+```java
+public abstract class acessorio {
+   private String Cor, Forma;
+   private float Tamanho;
+
+   public acessorio(String Cor, String Forma, float Tamanho) {
+      this.Cor = Cor;
+      this.Forma = Forma;
+      this.Tamanho = Tamanho;
+   }
+
+   public String getCor() {
+      return Cor;
+   }
+   public void setCor(String Cor) {
+      this.Cor = Cor;
+   }
+
+   public String getForma() {
+      return Forma;
+   }
+   public void setForma(String Forma) {
+      this.Forma = Forma;
+   }
+
+   public float getTamanho() {
+      return Tamanho;
+   }
+   public void setTamanho(float Tamanho) {
+      this.Tamanho = Tamanho;
+   }
+
+   public abstract void Colocar_pulseira();
+
+   public abstract void Colocar_Oculos();
+}
+```
+
+```java
+public class pulseira extends acessorio {
+   
+   public pulseira(String Cor, String Forma, float Tamanho) {
+      super(Cor, Forma, Tamanho);
+   }
+
+   public void Colocar_pulseira() {
+      System.out.println("Colocar no braço");
+   }
+}
+```
+
+```java
+public class oculos extends acessorio {
+   
+   public oculos(String Cor, String Forma, float Tamanho) {
+      super(Cor, Forma, Tamanho);
+   }
+
+   public void Colocar_oculos() {
+      System.out.println("Colocar no olho");
+   }
+}
+```
+
+```java
+public class Teste {
+   public static void main(String[] args) {
+      acessorio pulseira = new acessorio("Verde", "Redondo", 10.0f);
+      acessorio oculos = new acessorio("Amarelo", "Redondo", 10.5f);
+
+      System.out.println("A cor da pulseira: " + pulseira.getCor() + "A forma da pulseira é: " + pulseira.getForma() + "O tamanho da pulseira é: " + pulseira.getTamanho());
+
+      System.out.println("A cor do óculos: " + oculos.getCor() + "A forma do óculos é: " + oculos.getForma() + "O tamanho do óculos é: " + oculos.getTamanho());
+   }
+}
+``` 
