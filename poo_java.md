@@ -173,7 +173,7 @@ public class oculos extends acessorio {
 **Curiosidade**
 - Construtor não é herdado, pois toda classe tem construtor, e construtor tem que ter o mesmo nome da classe, então não faz sentido o construtor ser herdado.
 
--Na sublasse, ter o construtor não default, ou seja os atributos passarem por parâmetro, os atributos que estão sendo herdado, você pode usar o comando super
+- Na sublasse, ter o construtor não default, ou seja os atributos passarem por parâmetro, os atributos que estão sendo herdado, você pode usar o comando super
 
 ```java 
 public class pulseira extends acessorio {
