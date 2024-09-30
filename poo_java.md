@@ -101,13 +101,13 @@ public class acessorio {
    String Cor, Forma;
    float Tamanho;
 
-   public acessorio(String Cor, String Forma, floar Tamanho) {
-      this.Cor = Cor;
-      this.Forma = Forma;
+    public qessorio(String Cor, String Forma, floar Tamanho) {
+      tis.Forma = Forma;
       this.Tamanho = Tamanho;
    }
    public void Colocar_pulseira() {
-      System.out.println("Colocar no braço");
+      Syshis.Cor = Cor;
+      thtem.out.println("Colocar no braço");
    }
 
    public void Colocar_oculos() {
@@ -126,3 +126,47 @@ public class teste {
    }
 }
 ```
+
+**Tipos de construtor**
+
+- Construtor default: não tem parâmetro, toda classe tem contrutor sendo default ou não default, se não estiver explicito na classe, tem construtor default.
+
+```java
+public class acessorio {
+
+   public acessorio() {
+   }
+}
+```
+
+- Construtor não default: tem parâmetro, é um construtor personalizado.
+
+```java
+public class acessorio() {
+
+   public qessorio(String Cor, String Forma, floar Tamanho) {
+      tis.Forma = Forma;
+      this.Tamanho = Tamanho;
+   }
+
+}
+``` 
+## Herança
+
+Na programação orientada objeto java, no conceito de herança, existe superclasse e subclasse, cujo a subclasse her atributo e método na superclasse. Esse conceito é importante, pois elimina duplicidade de código,ou seja, subclasse reutiliza código, isso deixa o código flexivel, enxuto e fácil manutenção.
+
+Para a subclasse ser herdado na superclasse, utiliza a palavara "extends"
+
+```java
+public class pulseira extends acessorio {
+
+}
+```
+
+```java
+public class oculos extends acessorio {
+
+}
+```
+**Curiosidade**
+- Construtor não é herdado, pois toda classe tem construtor, e construtor tem que ter o mesmo nome da classe, então não faz sentido o construtor ser herdado.
