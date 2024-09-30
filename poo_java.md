@@ -157,7 +157,7 @@ public class acessorio() {
 
 Na programação orientada objeto java, no conceito de herança, existe superclasse e subclasse, cujo a subclasse her atributo e método na superclasse. Esse conceito é importante, pois elimina duplicidade de código,ou seja, subclasse reutiliza código, isso deixa o código flexivel, enxuto e fácil manutenção.
 
-Para a subclasse ser herdado na superclasse, utiliza a palavra "extends"
+Para a subclasse ser herdado na superclasse, utiliza a palavra "extends".
 
 ```java
 public class pulseira extends acessorio {
@@ -173,7 +173,7 @@ public class oculos extends acessorio {
 **Curiosidade**
 - Construtor não é herdado, pois toda classe tem construtor, e construtor tem que ter o mesmo nome da classe, então não faz sentido o construtor ser herdado.
 
-- Na sublasse, ter o construtor não default, ou seja os atributos passarem por parâmetro, os atributos que estão sendo herdado, você pode usar o comando super
+- Na sublasse, ter o construtor não default, ou seja os atributos passarem por parâmetro, os atributos que estão sendo herdado, você pode usar o comando super.
 
 ```java 
 public class pulseira extends acessorio {
