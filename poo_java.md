@@ -157,7 +157,7 @@ public class acessorio() {
 
 Na programação orientada objeto java, no conceito de herança, existe superclasse e subclasse, cujo a subclasse her atributo e método na superclasse. Esse conceito é importante, pois elimina duplicidade de código,ou seja, subclasse reutiliza código, isso deixa o código flexivel, enxuto e fácil manutenção.
 
-Para a subclasse ser herdado na superclasse, utiliza a palavara "extends"
+Para a subclasse ser herdado na superclasse, utiliza a palavra "extends"
 
 ```java
 public class pulseira extends acessorio {
