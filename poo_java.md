@@ -102,7 +102,8 @@ public class acessorio {
    float Tamanho;
 
     public aessorio(String Cor, String Forma, floar Tamanho) {
-      tis.Forma = Forma;
+      this.Cor = Cor;
+      this.Forma = Forma;
       this.Tamanho = Tamanho;
    }
    public void Colocar_pulseira() {
@@ -144,8 +145,9 @@ public class acessorio {
 ```java
 public class acessorio() {
 
-   public qessorio(String Cor, String Forma, floar Tamanho) {
-      tis.Forma = Forma;
+   public aessorio(String Cor, String Forma, float Tamanho) {
+      this.Cor = Cor;
+      this.Forma = Forma;
       this.Tamanho = Tamanho;
    }
 
@@ -170,3 +172,14 @@ public class oculos extends acessorio {
 ```
 **Curiosidade**
 - Construtor não é herdado, pois toda classe tem construtor, e construtor tem que ter o mesmo nome da classe, então não faz sentido o construtor ser herdado.
+
+-Na sublasse, ter o construtor não default, ou seja os atributos passarem por parâmetro, os atributos que estão sendo herdado, você pode usar o comando super
+
+```java 
+public class pulseira extends acessorio {
+   public pulseira (String Cor, String Forma, float Tamanho) {
+      super(Cor, Forma ,Tamanho);
+   }
+}
+```
+Nesse código, na hora de atribuir valor, qunado instaciar o objeto do tipo pulseira e construtor pulseira, e chamar os métodos do objeto do tipo pulseira, vai funcionar, porque a subclasse herda atributos e métodos da superclasse, ele reutiliza o código, não precisa digitar novamente.
