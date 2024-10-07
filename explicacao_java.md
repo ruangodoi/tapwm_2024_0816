@@ -59,7 +59,22 @@ public class Conta {
 
 **Herança**
 
-- QUando a subclasse herda **atributos** e **métodos** da super classe, isso evita duplicidade de código, tendo reutilização no meu código.
+- Quando a subclasse herda **atributos** e **métodos** da super classe, isso evita duplicidade de código, tendo reutilização no meu código.
+
+**Sobreposição**
+
+- Quando definido método abstarct na super classe, a subclasse tem que sobresecever o método, para ter implementação da lógica especifíca na subclasse.
+
+- Usa o comando **@Override**
+
+```java
+public class Conta_corrente extends Conta {
+    @Override
+    public void depositar(double Valor) {
+        Saldo += Valor;
+    }
+}
+```
 
 
 
