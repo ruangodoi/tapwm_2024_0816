@@ -1,4 +1,4 @@
-# Explicação do projeto java
+# Explcação do projeto java
 
 ## Classe Conta
 
@@ -53,6 +53,8 @@ public class Conta {
 
 - Construtor não default: tem parâmetro, isso, facilita dna hora de instanciar objeto usando o construtor não default, posso atribuir valor ao meu atrbuto na hora que instancio a classe, por os atrbutos passa por parâmetro, isso otimiza linha de código.
 
+- Quando declaro construtor não default, tenho que escrver o construtor default, pois a JVM entende que quando escrevo construtor não default, e quero usar construtor default, tenho que escrever o construtor default.
+
 ## Classe Conta_corrente
 
 - Ela é uma subclasse da conta Conta, usando a palavara **extends**.
@@ -60,6 +62,8 @@ public class Conta {
 **Herança**
 
 - Quando a subclasse herda **atributos** e **métodos** da super classe, isso evita duplicidade de código, tendo reutilização no meu código.
+
+- Ele não herda construtor pois, o nome do construtor tem sque ser o mesmo da própria classe, então toda classe tem seu construtor
 
 **Sobreposição**
 
@@ -75,6 +79,18 @@ public class Conta_corrente extends Conta {
     }
 }
 ```
+## Classe Conta_poupanca
+
+- Na classe, não temos nenhum reuisitos de negócio da própria, como a classe é subclasse da classe Conta, então herda atributos e métodos da superclasse. 
+
+- Como não herda contrutor, cria o construtor sendo o nome Conta_poupanca, e para os atrbutos herdado passar por parâmetro, usa o comando **super**, ele puxa os atributos e métodos da superclasse.
+
+## interface Tributavel
+
+- Uma interface, só possui abstrações do método, não tem implementação lógica do método, não possui nem atrbuos e métodos concretos. Ele cria certo padrão, para as classes que assinam o contrato com a interface, poder sobrescrever todos os métodos criados da interface.
+
+- No código, a classe conta_corrente e seguro de vida, assinam contrato com a interface, então precisa utilizar tdos os métodos da interface sendo método abstract ou não, apenas a assinatura dele, e para a classe sobrescrver precisa ter o mesmo nome e tipo de retorno. Isso já entra o conceito de polimorfismo, pois é o mesmo método, só que tem comportamento diferentes das classes.
+
 
 
 
