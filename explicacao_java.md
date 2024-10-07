@@ -1,4 +1,4 @@
-# Explcação do projeto java
+# Explicação do projeto java
 
 ## Classe Conta
 
