@@ -1,4 +1,4 @@
-# Explcação do projeto java
+# Explicação do projeto java
 
 ## Classe Conta
 
@@ -89,8 +89,38 @@ public class Conta_corrente extends Conta {
 
 - Uma interface, só possui abstrações do método, não tem implementação lógica do método, não possui nem atrbuos e métodos concretos. Ele cria certo padrão, para as classes que assinam o contrato com a interface, poder sobrescrever todos os métodos criados da interface.
 
-- No código, a classe conta_corrente e seguro de vida, assinam contrato com a interface, então precisa utilizar tdos os métodos da interface sendo método abstract ou não, apenas a assinatura dele, e para a classe sobrescrver precisa ter o mesmo nome e tipo de retorno. Isso já entra o conceito de polimorfismo, pois é o mesmo método, só que tem comportamento diferentes das classes.
+- No código, a classe conta_corrente e seguro de vida, assinam contrato com a interface, então precisa utilizar todos os métodos da interface sendo método abstract ou não, apenas a assinatura dele, e para a classe sobrescrver precisa ter o mesmo nome e tipo de retorno. Isso já entra o conceito de polimorfismo, pois é o mesmo método, só que tem comportamento diferentes das classes.
 
+
+## Classe SeguroDeVida
+
+- Na classe ele assina contrato com interface Trubutavel, ou seja, ele obrigatoriamente tem que sobrescever todos os métodos da interface.
+
+- Ele sobrescreve o método getValorImposto(), retornando o valor fixo.
+
+## Classe CalculadorImposto
+
+- Na classe, ele tem que trabalhar com a interface. Ele armazena a somatória dos impostos, por isso ele trabalha com a interface, pois a interface possui o método getValorImposto(), e sobrescrito com classes que tem o imposto e assinam com a interface.
+
+- Para armazenar, instanciei o atributo TotalImposto, e instanciei o método registra, onde recebe o parâmetro, que é objeto total do tipo tributavel.
+
+- Nesse método, o atributo TotalImposto já soma todos os imposto com método getValorImposto, referenciado do objeto total, do tipo Tributavel. Isso quer dizer, que as classes que assinam o contrato, sobrescreve o método, conforme é sobrescrito, o atributo soma o novo imposto com as outros que já assinaram com a interface.
+
+- Tem método getTotalImposto(), para classes Testre poder acessar.
+
+```java
+public class CalculadorImpsoto {
+    private double TotalImposto;
+
+    public void registra(Tributavel total) {
+        this.TotalImposto += total.getValorImposto();
+    }
+
+    public double getTotalImposto() {
+        return TotalImposto;
+    }
+}
+```
 
 
 
