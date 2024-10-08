@@ -94,6 +94,7 @@ public class teste {
 
 - O nome do construtor tem que ser o mesmo nome da classe.
 
+
 ## Exemplo
 
 ```java
@@ -186,7 +187,7 @@ Nesse código, na hora de atribuir valor, qunado instaciar o objeto do tipo puls
 
 ## Encapsulamento
 
-Encapsular os atributos é essencial para desenvolvimento para o sistema, pois a maior vantagem **proteger** e **padronizar** os atributos nem numa outra classe.
+Encapsular os atributos é essencial para desenvolvimento para o sistema, pois a maior vantagem **proteger** e **padronizar** os atributos nem numa outra classe. Ao encapsular, estou protegendo ele numa classe que foi criada, certamente na superclasse, não pode ser acessado diretamente nas outras classes.
 
 **Qualificador**: é o nível de encapsulamento
 
@@ -198,7 +199,7 @@ Encapsular os atributos é essencial para desenvolvimento para o sistema, pois a
 - package: varíavel apenas que estão dentro de uma determinada pasta.
 
 **Curiosidade**
-- Ao definir private nos atributos, as subclasse pode acessar e fazer manutenções usando os métodos get e set.
+- Ao definir private nos atributos, as subclasse pode acessar e fazer manutenções usando os métodos get e set, onde tem um certo controle para acessar e modificar os atributos..
 
 ```java
 public class acessorio {
@@ -252,6 +253,8 @@ Quando chama algum método, atribui valor ou pega o atributo, ele são referenci
 ## Polimorfismo
 
 Polimorfismo no java, em tradução é "várias formas", o código pode pode ter várias formas de executar o programa, deixando o código mais enxuto, flexível, padronização, evitar duplicidade de código, por exemplo, para evitar code small (duplicidade de código), pode isolar numa classe, usar o coceito de herança, jogar atributos e métodos na superclasse.  
+
+- Um exemplo de polimorfismo, é sobreposição do método, pensa numa superclasse, que tem um método concreto. Na subclasse, tem uma lógica especifica desse método, então a sublasse sobrescreve ele. Conclusão: é o mesmo método, mas o comportamento do métodos das classes, é diferente.
 
 ## Abstract
 
