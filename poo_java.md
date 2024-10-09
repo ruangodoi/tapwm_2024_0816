@@ -187,7 +187,7 @@ Nesse código, na hora de atribuir valor, qunado instaciar o objeto do tipo puls
 
 ## Encapsulamento
 
-Encapsular os atributos é essencial para desenvolvimento para o sistema, pois a maior vantagem **proteger** e **padronizar** os atributos nem numa outra classe. Ao encapsular, estou protegendo ele numa classe que foi criada, certamente na superclasse, não pode ser acessado diretamente nas outras classes.
+Encapsular os atributos é essencial para desenvolvimento para o sistema, pois a maior vantagem é **proteger** e **padronizar** os atributos em uma classe. Ao encapsular, estou protegendo ele numa classe que foi criada, certamente na superclasse, não pode ser acessado diretamente nas outras classes.
 
 **Qualificador**: é o nível de encapsulamento
 
@@ -284,6 +284,8 @@ Para ter a classe e método abstrato, basta colocar a palavra "abstract", isso d
 
 **Faz o código acessorio usando todos esses conceitos**
 
+**O método Colocar, deve ser abstrato, e cada subclasse tem a sua funcionalidade**
+
 ```java
 public abstract class acessorio {
    private String Cor, Forma;
@@ -316,9 +318,7 @@ public abstract class acessorio {
       this.Tamanho = Tamanho;
    }
 
-   public abstract void Colocar_pulseira();
-
-   public abstract void Colocar_Oculos();
+   public abstract void Colocar();
 }
 ```
 
@@ -329,7 +329,8 @@ public class pulseira extends acessorio {
       super(Cor, Forma, Tamanho);
    }
 
-   public void Colocar_pulseira() {
+   @Override
+   public void Colocar() {
       System.out.println("Colocar no braço");
    }
 }
@@ -342,7 +343,8 @@ public class oculos extends acessorio {
       super(Cor, Forma, Tamanho);
    }
 
-   public void Colocar_oculos() {
+   @Override
+   public void Colocar() {
       System.out.println("Colocar no olho");
    }
 }
@@ -351,12 +353,22 @@ public class oculos extends acessorio {
 ```java
 public class Teste {
    public static void main(String[] args) {
-      acessorio pulseira = new acessorio("Verde", "Redondo", 10.0f);
-      acessorio oculos = new acessorio("Amarelo", "Redondo", 10.5f);
+      acessorio pulseira = new pulseira("Verde", "Redondo", 10.0f);
+      acessorio oculos = new oculos("Amarelo", "Redondo", 10.5f);
 
       System.out.println("A cor da pulseira: " + pulseira.getCor() + "A forma da pulseira é: " + pulseira.getForma() + "O tamanho da pulseira é: " + pulseira.getTamanho());
 
       System.out.println("A cor do óculos: " + oculos.getCor() + "A forma do óculos é: " + oculos.getForma() + "O tamanho do óculos é: " + oculos.getTamanho());
+
+      System.out.println("Colocar a pulseira: " + pulseira.Colocar());
+      System.out.println("Colocar o óculos: " + oculos.Colocar());
    }
 }
 ``` 
+
+**Explicação**
+
+- A classe acessorio é abstract, então não pode instanciar o objeto nessa classe, e serve como modelo comum para outras classes, os métodos abstract, as subclasse, para sobrescrever, tem que seguir o modelo nos métodos abstrato da classe.
+
+- Ao encapsular os atributos, você está protegendo os atributos da classe
+
