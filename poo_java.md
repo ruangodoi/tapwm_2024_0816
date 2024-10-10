@@ -360,8 +360,8 @@ public class Teste {
 
       System.out.println("A cor do óculos: " + oculos.getCor() + "A forma do óculos é: " + oculos.getForma() + "O tamanho do óculos é: " + oculos.getTamanho());
 
-      System.out.println("Colocar a pulseira: " + pulseira.Colocar());
-      System.out.println("Colocar o óculos: " + oculos.Colocar());
+      pulseira.Colocar();
+      oculos.Colocar();
    }
 }
 ``` 
@@ -370,5 +370,11 @@ public class Teste {
 
 - A classe acessorio é abstract, então não pode instanciar o objeto nessa classe, e serve como modelo comum para outras classes, os métodos abstract, as subclasse, para sobrescrever, tem que seguir o modelo nos métodos abstrato da classe.
 
-- Ao encapsular os atributos, você está protegendo os atributos da classe
+- Ao encapsular os atributos, você está protegendo os atributos da classe que os atrbutos foram criados, ou seja, as outras classes não tem acesso diretamente. Para outras classes acessarem elas, usa-se os métodos get e set, get ele pega o atributo, ele retorna, e o set, o atributo passa por parâmetro do método set. Então um certo padrão, para subclasse acessarem esse método.
+
+- Defini o construtor não default, ou seja, os atrbutos estão passando por parâmetro desse construtor, isso facilita quando instâncio o objeto, usando o construtor, então posso atribuir valor diretamente na hora de instânciar o objeto. Se não definir o  não defualt, o construtor da classe acessorio é default, ou seja, não defini nenhum parâmetro dessa classe.
+
+
+
+
 
