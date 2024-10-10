@@ -69,7 +69,7 @@ public class teste {
       acessorio pulseira = new acessorio();  //Instanciou o objeto do tipo acessorio, com construtor acessorio
       acessorio oculos = new acessorio();
 
-      pulseira.Cor = "Verde"; // Atribiu valor para atributo Cor, do objeto pulseira
+      pulseira.Cor = "Verde"; // Atribuiu valor para atributo Cor, do objeto pulseira
       pulseira.Forma = "Redonda";
       pulseira.Tamanho = 10.0f;
 
