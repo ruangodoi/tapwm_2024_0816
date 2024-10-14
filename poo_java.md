@@ -172,7 +172,7 @@ public class oculos extends acessorio {
 }
 ```
 **Curiosidade**
-- Construtor não é herdado, pois toda classe tem construtor, e construtor tem que ter o mesmo nome da classe, então não faz sentido o construtor ser herdado.
+- Construtor não é herdado, pois toda classe tem construtor, e construtor tem que ter o mesmo nome da classe, então não faz sentido o construtor ser herdado. E se estiver atributo declarado na subclasse, caso o construtor é herdado, não tem como usar construtor, usando o atributo específico, por isso que o construtor não é herdado
 
 - Na sublasse, ter o construtor não default, ou seja os atributos passarem por parâmetro, os atributos que estão sendo herdado, você pode usar o comando super.
 
@@ -374,7 +374,17 @@ public class Teste {
 
 - Defini o construtor não default, ou seja, os atrbutos estão passando por parâmetro desse construtor, isso facilita quando instâncio o objeto, usando o construtor, então posso atribuir valor diretamente na hora de instânciar o objeto. Se não definir o  não defualt, o construtor da classe acessorio é default, ou seja, não defini nenhum parâmetro dessa classe.
 
+- Polimorfismo: existe 2 situações de polimorfismo, quando defino método abstract, ou seja, só é assinatura do método, a subclasse sobrescreve esse método, ou seja, vai utilizar esse método, usando comando @Override, e para sobrescrver tem ter o mesmo nome e memso tipo de retorno. Então é o mesmo método, só que comportamento é diferente de cada classe. Isso deixa o código masi flexível, fácil manutenção, reutilazação de código, ocupa menos espaço de memória, e padronização, porque quando sobrescreve tem o padrão pra seguir, seguir o mesmo nome e tipo de retorno. Outra situação, é na hora de referenciar o objeto. O plimorfismo permite que posso refenciar tanto a subclasse, tanto na superclasse. Pois na hora de testar atributo e método, não existe nehum método específico pra aquela classe, o refencia-lo de 2 manieras.
 
+## Interface
+
+- É uma interface que possui apenas abstrações do meu método, ou seja, assinatura do meu método, não tem atributos e métodos concretos, ou seja não tem a implementação da lógica dos métodos. Pode ser tanto método normal, tanto método abstrato. 
+
+- E quando as classes assinam o contrato com a interface, a classe tem sobrescrver **todos** os métodos da interface.
+
+- A interface traz uma padronização no código, pois qunado a classe assina, tem o padrão a seguir para sobrescrever, ter o mesmo nome e tipo de retorno, e tabmbém economiza espaço de memória. Isso já entra o polimorfismo, pois os métodos pode ter comportamento diferentes, não atrelar método específico.
+
+- Quando intânciio os objeto, o polimorfismo da possibilidade de referenciar do tipo interface, subclasse ou superclasse, Caso não tenha nenhum método específico, assim coneguigo testar todos os métodos e atributos.
 
 
 
