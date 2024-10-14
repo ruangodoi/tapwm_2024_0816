@@ -386,5 +386,13 @@ public class Teste {
 
 - Quando intânciio os objeto, o polimorfismo da possibilidade de referenciar do tipo interface, subclasse ou superclasse, Caso não tenha nenhum método específico, assim coneguigo testar todos os métodos e atributos.
 
+- Para as classes assinarem, usa o comando **implements** e o nome da interface.
+
+```java
+public interface Tributavel {
+   public void getValorImposto();
+}
+```
+
 
 
