@@ -106,7 +106,7 @@ public class Conta_corrente extends Conta {
 
 - Nesse método, o atributo TotalImposto já soma todos os imposto com método getValorImposto, referenciado do objeto total, do tipo Tributavel. Isso quer dizer, que as classes que assinam o contrato, sobrescreve o método, conforme é sobrescrito, o atributo soma o novo imposto com as outros que já assinaram com a interface.
 
-- Tem método getTotalImposto(), para classes Testre poder acessar.
+- Tem método getTotalImposto(), para classes Teste poder acessar.
 
 ```java
 public class CalculadorImpsoto {
@@ -121,6 +121,12 @@ public class CalculadorImpsoto {
     }
 }
 ```
+
+## Classe Teste
+
+- Essa classe testa todos os atributos e métodos, quando instâncio o objeto,os valores passa por parâmetro no construtor.
+
+- Quando instncio objeto seguro, usando o construtor SeguroDeVida(), o polimorfismo da essa possibilidade de instanicar do tipo Seguro de Vida e Interface Tributavel, quando a classe assina o contrato com a classe, e não tem método específico nele, só é sobrescrição do método. Posso referenciar o objeto tanto na classe SeguroDeVida, tanto da onterface Tributavel.
 
 
 
