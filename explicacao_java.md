@@ -128,6 +128,13 @@ public class CalculadorImpsoto {
 
 - Quando instncio objeto seguro, usando o construtor SeguroDeVida(), o polimorfismo da essa possibilidade de instanicar do tipo Seguro de Vida e Interface Tributavel, quando a classe assina o contrato com a classe, e não tem método específico nele, só é sobrescrição do método. Posso referenciar o objeto tanto na classe SeguroDeVida, tanto da onterface Tributavel.
 
+```java
+
+public class Teste {
+    public static void main(String[] args) {
+        Trbutavel seguro = new SeguroDeVida();
+    }
+}
 
 
 
