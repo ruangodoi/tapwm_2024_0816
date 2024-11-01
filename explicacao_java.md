@@ -7,7 +7,7 @@
 - Classe concreta: pode instaciar objeto diretamente
 - Classe abstract: não pode instanciar o objeto diretamente
 
-- A super é defina como defina como abastrato, ou seja, pode ter instancia de objeto diretamente, e temos métodos abstaratos (Pra ter métodos abstrato, a classe precisa ser abstrato), isso serve como modelo para as suas subclasses.
+- A classe é defina como defina como abastrato, ou seja, pode ter instancia de objeto diretamente, e temos métodos abstaratos (Pra ter métodos abstrato, a classe precisa ser abstrato), isso serve como modelo para as suas subclasses.
 
 **Encapsulamento**
 
